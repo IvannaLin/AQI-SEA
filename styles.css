@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: flex-start; */
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2em;
+    color: #00636e;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #00636e;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover, .navigation .a:active{
+    background: #359381 ;
+    color: #fff;
+}
+
+.parallex{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('sky.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #008897; 
+    /* color: #fff;  */
+    text-shadow: 2px 2px 2px rgba(0,0, 0,.2);
+}
+
+.parallex img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background: #003339;
+    padding: 100px;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec h3 {
+    font-size: 1.5em;
+    color: #fff; /* Dark teal */
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.sec-alt {
+    position: relative;
+    background: #fff; /* Inverse background color */
+    color: #003339; /* Inverse text color */
+    padding: 100px;
+}
+
+.sec-alt h2 {
+    font-size: 3em;
+    color: #003339; /* Inverse heading text color */
+    margin-bottom: 10px;
+}
+
+.sec-alt h3 {
+    font-size: 1.5em;
+    color: #003339; /* Dark teal */
+    margin-bottom: 5px;
+}
+
+.sec-alt p {
+    font-size: 1em;
+    color: #003339; /* Inverse paragraph text color */
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
+img {
+    width: 50%;
+    height: auto; 
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #map {
+    height: 80vh;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .dropdown {
+    margin: 20px;
+  }
+  #map {
+    height: 380px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#country-select {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 292.362 292.362"><path d="M287.174 69.299c-7.62-7.617-19.998-7.617-27.614 0L146.181 182.678 32.802 69.299c-7.617-7.617-19.997-7.617-27.614 0-7.617 7.617-7.617 19.997 0 27.614l127.987 127.987c7.617 7.617 19.997 7.617 27.614 0l127.987-127.987c7.617-7.617 7.617-19.997 0-27.614z" fill="%23333"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#country-select:focus {
+    border-color: #66afe9;
+}
+
+#country-select option {
+    padding: 10px;
+}
+
+.legend {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.legend h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.legend p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Colouring the Air Pollution Level column based on AQI categories */
+table td:nth-child(2) {
+    font-weight: bold;
+}
+
+table td:nth-child(2).good {
+    background-color: #009966; /* Green */
+}
+
+table td:nth-child(2).moderate {
+    background-color: #ffde33; /* Yellow */
+}
+
+table td:nth-child(2).usg {
+    background-color: #ff9933; /* Orange */
+}
+
+table td:nth-child(2).unhealthy {
+    background-color: #cc0033; /* Red */
+}
+
+table td:nth-child(2).very-unhealthy {
+    background-color: #660099; /* Purple */
+}
+
+table td:nth-child(2).hazardous {
+    background-color: #7e0023; /* Maroon */
+}
+
+.read-more-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.read-more-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.read-more-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.read-more-section ul li {
+    margin-bottom: 10px;
+}
+
+.read-more-section ul li a {
+    text-decoration: none;
+    color: #0077cc;
+    transition: color 0.3s ease;
+}
+
+.read-more-section ul li a:hover {
+    color: #004466;
+}
